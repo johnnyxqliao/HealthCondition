@@ -27,6 +27,8 @@ def nextLevelTime(level, index, data):
         border = 2900
     elif level == 3:
         border = 4000
+    elif level == 1:
+        return [float("inf"), -float("inf")]
     indexLine = SG.LineString([(start, index), (end, index)])
     line = SG.LineString(list(zip(data[0], data[1])))
     coords = np.array(line.intersection(indexLine))
